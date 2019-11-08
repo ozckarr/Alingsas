@@ -1,0 +1,111 @@
+/*Styling för bildspel under navbar.*/
+/*Tre bilder som ökar och minskar i opacity med animation @keyframes,*/
+/*så bara en sysns i taget.*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Slide1 styling storlek färg.*/
+.slider{
+    height: 11.5rem;
+    margin: 0 0 1rem 0;
+    border: 0.3rem;
+    border-color: #047366;
+    border-style: none none solid none;
+}
+
+/*slide1 storlek och animationslängd.*/
+.bildspel1 {
+    animation-iteration-count: infinite;
+    position: absolute;
+    height: 11.5rem;
+    width: 100%;
+    object-fit: cover;
+    animation-name: slide1;
+    animation-duration: 30s;
+}
+
+/*Bestämmer opacity(transparens) i animation keyframes för bildspel1.*/
+@keyframes slide1 {
+    0% {opacity: 1;}
+    33% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+/*Slide2 storlek och animationslängd.*/
+.bildspel2 {
+    position: absolute;
+    animation-iteration-count: infinite;
+    height: 11.5rem;
+    width: 100%;
+    object-fit: cover;
+    animation-name: slide2;
+    animation-duration: 30s;
+}
+
+/*Bestämmer opacity(transparens) i animation keyframes för bildspel2.*/
+@keyframes slide2 {
+    0% {opacity: 0;}
+    33% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+/*Slide3 storlek och animationslängd.*/
+.bildspel3 {
+    position: absolute;
+    animation-iteration-count: infinite;
+    height: 11.5rem;
+    width: 100%;
+    object-fit: cover;
+    animation-name: slide3;
+    animation-duration: 30s;
+}
+
+/*Bestämmer opacity(transparens) i animation keyframes för bildspel3.*/
+@keyframes slide3 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    66% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/*Större bildstorlek vid tablet display.*/
+@media(min-width: 48em){
+    .slider{
+        height: 20rem;
+    }
+
+    .bildspel1{
+        height: 20rem;
+    }
+
+    .bildspel2{
+        height: 20rem;
+    }
+
+    .bildspel3{
+        height: 20rem;
+    }
+}
+
+/*Extra stora bilder vid desktop och större display storlekar.*/
+@media(min-width: 62em){
+    .slider{
+        height: 30rem;
+    }
+
+    .bildspel1{
+        height: 30rem;
+    }
+
+    .bildspel2{
+        height: 30rem;
+    }
+
+    .bildspel3{
+        height: 30rem;
+    }
+}

@@ -1,0 +1,181 @@
+/*Styling för mitten grid i body.*/
+
+/*Tar bort margin, padding på hela sidan, och lägger till ny Font.*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "roboto", sans-serif;
+}
+
+/*grid layout i två columner för mobil*/
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "box1 box1" 
+    "box2 box2" 
+    "box3 box3" 
+    "box4 box4"
+    "box5 box5"
+    "box6 box6"
+    "box7 box7"
+    "box8 box8"
+    "box9 box9"
+    "box10 box10"
+    "box11 box12"
+    "box11 box12"
+    "box13 box14"
+    "box13 box14"
+    ;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+/*Lådorna i grid får all samma utseende. */
+.box {
+    border-radius: 0.5rem;
+    font-family: "Roboto",sans-serif;
+    box-shadow: 0 0 0.5rem #c2c2c2, 0 0 0.5rem #c2c2c2;
+    background-color: white;
+    transition: box-shadow 1s;
+}
+
+/* Lådor får skugga vid mouse over.*/
+.box:hover {
+    box-shadow: 0 0 0.5rem #707070, 0 0 0.5rem #707070;
+    background-color: white;
+    transition-timing-function: linear;
+}
+
+/*Box text styling h2-h3-p-a element nedan*/
+.box h2{
+    font-family: "Roboto",sans-serif;
+    color: #047366;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    border: 0.3rem;
+    border-color: #047366;
+    border-style: none none solid none;
+}
+
+.box h3{
+    font-family: "Roboto",sans-serif;
+    color: white;
+    background-color: #047366;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-size: 1.2rem;
+    border: 0.3rem;
+    border-color: #047366;
+    border-style: none none solid none;
+}
+
+.box p{
+    font-size: 1rem;
+}
+
+/*Styling övre boxar.*/
+.box_content_a {
+    margin: 1rem 3rem 2rem 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/*styling mitten boxar.*/
+.box_content_b {
+    margin: 1rem 3rem 2rem 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/*Text styling i övre lådor.*/
+.box_content_a a{
+    font-size: 1em;
+    color: #047366;
+    line-height: 2rem;
+    text-decoration: none;
+}
+/*Text styling i mitten lådor.*/
+.box_content_b a{
+    font-size: 0.9em;
+    color: #047366;
+    text-decoration: none;
+}
+
+.box_content_a a:hover{
+    text-decoration: underline;
+}
+
+.box_content_a b:hover{
+    text-decoration: underline;
+}
+
+.box h4{
+    color: #838585;
+    font-size: 0.6rem;
+    line-height: 1rem;
+}
+
+.box-divider {
+    margin: 0.6rem 0;
+}
+
+/*bild storlek i botten lådor.*/
+.img_size {
+    object-fit: cover;
+    width: 100%;
+}
+
+/*Stora bilder i mitten av grid.*/
+.box img{
+    height: 10rem;
+}
+
+/*Små bilder i botten av grid.*/
+.box-small img{
+    height: 5rem;
+}
+
+/*Varje låda tilldelas plats i grid-area.*/
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+.box4{
+    grid-area: box4;
+}
+.box5{
+    grid-area: box5;
+}
+.box6{
+    grid-area: box6;
+}
+.box7{
+    grid-area: box7;
+}
+.box8{
+    grid-area: box8;
+}
+.box9{
+    grid-area: box9;
+}
+.box10{
+    grid-area: box10;
+}
+.box11{
+    grid-area: box11;
+}
+.box12{
+    grid-area: box12;
+}
+.box13{
+    grid-area: box13;
+}
+.box14{
+    grid-area: box14;
+}

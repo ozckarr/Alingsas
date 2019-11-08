@@ -1,0 +1,198 @@
+/*Styling för sida2 utbildning-barnomsorg.html*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Grid i utb/grundsk-sida - grid:ad för ev 2box på rad*/
+.ub_container{
+    display: grid;
+    grid-template-areas: 
+    "ub_box1" 
+    "ub_box2"
+    "ub_box3"
+    "ub_box4"
+    "ub_box5"
+    "ub_aktuellt"
+    "ub_box6"
+    "ub_box7"
+    "ub_box8"
+    "ub_box9"
+    "ub_box10"
+    "ub_box11"
+    "ub_box12"
+    "ub_box13"
+    ;
+    padding: 0.5rem;
+    grid-gap: 1rem;
+}
+
+/*Botten på Aktuellt*/
+.aktuellt_bott{ 
+    background-color: #047366;
+    border-radius: 0 0 0.5rem 0.5rem;
+    height: 0.5rem;
+}
+
+ /*Aktuellt justeringar ifrån h3*/
+.ub_aktuellt h3{
+    padding: 1rem 0 0 2rem;
+    font-size: 1.6rem
+}
+
+/*Varje låda tilldelas plats i grid-area.*/
+.ub_box1{ 
+    grid-area: ub_box1;
+}
+.ub_box2{
+    grid-area: ub_box2;
+}
+.ub_box3{
+    grid-area: ub_box3;
+}
+.ub_box4{
+    grid-area: ub_box4;
+}
+.ub_box5{
+    grid-area: ub_box5;
+}
+.ub_aktuellt{
+    grid-area: ub_aktuellt;
+}
+.ub_box6{
+    grid-area: ub_box6;
+}
+.ub_box7{
+    grid-area: ub_box7;
+}
+.ub_box8{
+    grid-area: ub_box8;
+}
+.ub_box9{
+    grid-area: ub_box9;
+}
+.ub_box10{
+    grid-area: ub_box10;
+}
+.ub_box11{
+    grid-area: ub_box11;
+}
+.ub_box12{
+    grid-area: ub_box12;
+}
+.ub_box13{
+    grid-area: ub_box13;
+}
+
+/*Ordnar nedre delen av bilder i box*/
+.box_content_img{
+    background-color: #047366;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/*Fyller ut bilder i boxar*/
+.box_content_img img{ 
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+/*Lägger till extrarad i titlar när storlek justeras*/
+.extra_rad{
+    display: none;
+}
+
+/*Innehåll sidmeny*/
+.box_content_sidemeny {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 0.7rem 2rem 2rem;
+}
+
+/*Sidmeny länkar, utseende och placering V */
+.box_content_sidemeny a{
+    font-size: 1em;
+    color: #047366;
+    line-height: 1.5rem;
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+.box_content_sidemeny a:hover{
+    text-decoration: underline;
+}
+
+/*Sidmeny länkar, utseende och placering V */
+.box_content_ub {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 2rem 2rem;
+}
+
+.ub_box_size{
+    height: 100%;
+}
+
+.box_content_ub a{
+    font-size: 1em;
+    color: #047366;
+    line-height: 1.2rem;
+    text-decoration: none;
+}
+
+/*justerar bilder i nyhetsboxar så att de fyller ut*/
+.ub_img_in_content{
+    width: 100%;
+    padding: 0.3rem 0;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.box_content_ub a:hover{
+    text-decoration: underline;
+}
+
+.box_content_ub p{
+    font-size: 0.9rem;
+}
+
+/*Övergång från mobil till tablet display.*/
+@media(min-width: 48em){
+    /*grid layout för mitten grid blir bredare.*/
+    .ub_container{
+        grid-template-areas: 
+        "ub_box1  ub_box2 ub_box2 ub_box3 ub_box3"  
+        "ub_box1  ub_box4 ub_box4 ub_box5 ub_box5"
+        "ub_box1 ub_aktuellt ub_aktuellt ub_aktuellt ub_aktuellt"
+        " . ub_box6 ub_box6 ub_box7 ub_box7"
+        " .  ub_box8 ub_box8 ub_box9 ub_box9"
+        " . ub_box10 ub_box10 ub_box11 ub_box11"
+        " . ub_box12 ub_box12 ub_box13 ub_box13"
+        ;
+    
+    width: 45rem;
+    margin: auto;
+    }
+
+    .box_content_sidemeny {
+        padding: 1rem 0.7rem 2rem 0.5rem;
+    }
+
+    /*Lägger till extrarad i titlar när storlek justeras*/
+    .extra_rad{
+        display: block;
+    }
+}
+
+/*Övergång till större displayer och desktop.*/
+@media(min-width: 62em){
+    .ub_container{
+    width: 57.5rem;
+    }
+
+    /*Lägger till extrarad i titlar när storlek justeras*/
+    .extra_rad{
+        display: none;
+    }
+}

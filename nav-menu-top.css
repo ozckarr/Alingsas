@@ -1,0 +1,96 @@
+/*Navbar längst upp på sidan med meny.*/
+
+/*Tar bort margin, padding på hela sidan, och lägger till ny Font.*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "roboto" , sans-serif;
+}
+
+/*Tar bort meny under logo vid mobil storlek.*/
+.top-menu ul{
+    display: none;
+}
+
+/*Tar bort iconer till höger om logo vi mobil storlek.*/
+.top-nav ul{
+    display: none;
+}
+
+.nav-right-holder{
+    display: flex;
+    align-items: center;
+}
+
+/*Form input används för search lådan till höger om logo.*/
+/*Tar bort search lådan vid mobil display.*/
+form input{
+    display: none;
+}
+
+/*Search box knapp med icon.*/
+form button{
+    background-color: white;
+    border: none;
+    width: 2rem;
+    border-radius: 1rem;
+    height: 2rem;
+}
+
+/*Fontawesome "hamburger" icon till höger om search.*/
+.menu-icon i{
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+
+/*länkar över logo.*/
+.top-links{
+    background-color: #047366;
+    height: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+.top-links ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    color: white;
+}
+
+/*Länkar till höger om search box.*/
+.top-links2{
+    height: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+.top-links2 li{
+    padding: 0.5rem;
+}
+
+/*Holder of Logo, search, form, links on top.*/
+.top-nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: auto;
+    margin: 0 auto;
+}
+
+/*Logo bild.*/
+.top-nav img{
+    margin: 0.4rem;
+    height: 2rem;
+}
+
+/*Meny under logo.*/
+.top-menu{
+    display: flex;
+    justify-content: space-evenly;
+}

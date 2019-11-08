@@ -1,0 +1,144 @@
+/*Responsiv övergång från mobil, tablet och desktop storlekar för index.html.*/
+/*Media queries för sida2 ligger kvar i utb_style.css för bättre överblick.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto',sans-serif;
+}
+
+/*Övergång från mobil till tablet display.*/
+@media(min-width: 48em){
+    .grid{
+        /*Mitten grid i body får en bredare layout.*/
+        grid-template-areas:
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+        "box4 box4 box4 box4 box5 box5 box5 box5 box6 box6 box6 box6"
+        "box4 box4 box4 box4 box5 box5 box5 box5 box6 box6 box6 box6"
+        "box7 box7 box7 box7 box7 box7 box8 box8 box8 box8 box8 box8"
+        "box7 box7 box7 box7 box7 box7 box8 box8 box8 box8 box8 box8"
+        "box9 box9 box9 box9 box9 box9 box10 box10 box10 box10 box10 box10"
+        "box11 box11 box11 box12 box12 box12 box13 box13 box13 box14 box14 box14";
+        width: 45rem;
+        margin: auto;
+    }
+
+    .top-nav {
+        width: 45rem; 
+    }
+
+    /*Tar bort meny länkar i topp.*/
+    .top-links{
+        display: none;
+    }
+    
+    /*Visar meny länkar på samma rad som logo.*/
+    .top-nav ul{
+        display: initial;
+        list-style: none;
+        display: flex;
+    }
+    
+    /*Bredare grid layout i footer.*/
+    .footer_contact{
+        box-sizing: border-box;
+        grid-template-areas: 
+        "footer_box_adress footer_box_telefon footer_box_email"
+        "footer_links footer_links footer_links"
+        "footer_box_copyright footer_box_copyright footer_box_copyright"
+        ;
+        width: 45rem;
+        grid-gap: 2rem;
+    }
+
+    /* Visar meny ul igen*/
+    .top-menu ul{
+        display: initial;
+        list-style: none;
+        display: flex;
+        text-align: center;
+        border: 0.3rem;
+        border-color: #047366;
+        border-style: solid none;
+    }
+
+    .top-menu li{
+        padding: 0.9rem;
+        border-left: 0.0625rem dotted white;
+        color: white;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .top-menu li:hover{
+        padding: 0.9rem;
+        background-color: #549c9c;
+        text-decoration: underline;
+    }
+
+    /* Tar bort länk underline och sättter text färg.*/
+    .top-menu a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    /*border höger på sista element*/
+    .top-menu li:last-of-type{
+        border-right: 0.0625rem dotted white;
+    }
+    
+    /*Tar bort meny "hamburger" icon*/
+    .menu-icon{
+        display: none;
+    }
+
+    .top-menu{
+        background-color: #047366;
+    }
+
+    /*Visar nav search box vid större display.*/
+    form input{
+        display: initial;
+        border: thin solid black;
+        border-right: none;
+        border-top-left-radius: 0.6rem;
+        border-bottom-left-radius: 0.6rem;
+        height: 1.4rem;
+        width: 8rem;
+    }
+        
+    /*Search box knapp med icon - anpassas till search box.*/
+    form button{
+        border: thin solid black;
+        background-color: white;
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
+        height: 1.4rem;
+    }
+    
+}
+
+/*Övergång till större displayer och desktop.*/
+@media(min-width: 62em){
+    /*Bredare mitten grid.*/
+    .grid{
+        width: 57.5rem;
+    }
+
+    .top-nav{
+        width: 57.5rem;
+    }
+
+    /*Bredare search input box.*/
+    form input{
+        width: 14rem;
+    }
+
+    .top-menu li{
+        padding: 1rem 1.6rem;
+    }
+}

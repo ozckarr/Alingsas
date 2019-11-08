@@ -1,0 +1,11 @@
+Vi har valt https://www.alingsas.se/
+
+Av Alexander Bryngelsson och Oskar lindblad
+
+Alexander Bryngelsson gjorde header, index-grid.
+
+Oskar lindblad gjorde Skol-grid och footer.
+
+Överlappning, estetetikdetaljer, buggfixning m m gjorde bägge
+
+Bilder kommer från Unsplash.com och Alingsås.se

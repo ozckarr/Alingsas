@@ -1,0 +1,164 @@
+/*Styling av footer i botten av sidorna.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "roboto" , sans-serif;
+}
+
+footer {
+    background-color: #047366;
+    height: 100%;
+    margin: 3.2em 0 0 0;
+    border: 0.2rem;
+    border-color: #549c9c;
+    border-style: solid none none none;
+    font-family: "Roboto",sans-serif;
+}
+
+.footer_grid {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 12.2rem;
+    margin: auto;
+}
+
+/*Icon position i topp av footer(instagram twitter facebook). */
+.socialmedia {
+    background-color: #047366; 
+    border-radius: 50%; 
+    border: solid 0.2rem #549c9c;
+    width: 3rem; 
+    height: 3rem; 
+    color: #549c9c; 
+    font-size: 1.6rem; 
+    display: flex; /*Centrerar logotyp*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -1.73rem;
+}
+
+/*Bakgrundsbild under soc-media iconer.*/
+.alingsas_footer {
+    background-image: url("./img/footer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.875rem;
+}
+
+.footer_info{
+    margin: auto;
+    text-align: center;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+
+.footer_links{
+    color: white;
+}
+
+.footer_links ul{
+    list-style: none;
+}
+
+.footer_links a{
+    color: white;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.footer_info p:hover{
+    text-decoration: underline;
+}
+
+/*Grid layout för kontakt i footer.*/
+.footer_contact{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "footer_box_adress"
+    "footer_box_telefon"
+    "footer_box_email"
+    "footer_links"
+    "footer_box_copyright"
+    ;
+    margin: auto;
+    grid-gap: 2rem;
+    padding: 1rem;
+}
+
+.footer_contact i{
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: #549c9c;
+}
+
+/*Boxar tilldelas plats i grid-area.*/
+.footer_box_adress {
+    grid-area: footer_box_adress;
+}
+
+.footer_box_telefon {
+    grid-area: footer_box_telefon;
+}
+
+.footer_box_email {
+    grid-area: footer_box_email;
+}
+
+.footer_box_copyright {
+    grid-area: footer_box_copyright;
+}
+
+.footer_links {
+    grid-area: footer_links;
+}
+
+.footer_box_decoration {
+    font-weight: 900;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    text-decoration: underline;
+    text-decoration-color: #549c9c;
+}
+
+.footer_copyright{
+    color: #549c9c;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.footer-potato-animation{
+    height: 1.5rem;
+}
+
+/*Potatis animation i botten av footer på båda sidor.*/
+.footer-potato-animation img{
+    height: 1.1rem;
+    position: absolute;
+    animation-name: move-potato;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+/*Rörelse från vänster till höger och rotation.*/
+@keyframes move-potato{
+    0%{
+        left: 25%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    50%{
+        opacity: 0.3;
+        left: 75%;
+        transform: rotate(720deg);
+    }
+    100%{
+        left: 25%;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
